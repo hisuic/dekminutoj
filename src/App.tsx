@@ -109,7 +109,7 @@ function App() {
         <h2 className="subtitle">出発地</h2>
         {/* 選択メニュー1 */}
         <select className="blue-area" value={option1} onChange={handleOption1Change}>
-          <option value="">--Select--</option>
+          <option value="">出発地を選択</option>
           {buildingSelection.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
@@ -120,7 +120,7 @@ function App() {
         <h2 className="subtitle">目的地</h2>
         {/* 選択メニュー2 */}
         <select className="blue-area" value={option2} onChange={handleOption2Change}>
-          <option value="">--Select--</option>
+          <option value="">目的地を選択</option>
           {buildingSelection.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
