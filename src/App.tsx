@@ -86,9 +86,9 @@ function App() {
   };
 
   // Button2
-  const handleButton2Click = () => {
-    setOverlayImages([images['map.png'], images['difsize.png']]);
-  };
+  // const handleButton2Click = () => {
+  //   setOverlayImages([images['map.png'], images['difsize.png']]);
+  // };
 
   return (
     <div className="container">
@@ -132,9 +132,9 @@ function App() {
         <button className="green-button" onClick={handleButton1Click}>
           経路を検索
         </button>
-        <button className="green-button" onClick={handleButton2Click}>
-          Button2
-        </button>
+        {/* <button className="green-button" onClick={handleButton2Click}> */}
+        {/*   Button2 */}
+        {/* </button> */}
 
         {/* 結果表示 debug用 */}
         {/* {distance !== null && ( */}
