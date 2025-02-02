@@ -227,13 +227,13 @@ export function dijkstra(graph: Graph, start: string, end: string): { distance: 
     // 探索が終わったら unvisited から除外
     unvisited.delete(current);
 
-    // 隣接するノードの距離を更新
+    // 隣り合うノードの距離を更新
     for (const edge of graph[current]) {
       const alt = dist[current] + edge.cost;
       if (alt < dist[edge.to]) {
         dist[edge.to] = alt;
         prevNode[edge.to] = current;
-        prevEdge[edge.to] = edge.label; // どの辺を通ったかを記憶
+        prevEdge[edge.to] = edge.label; // 通った道を格納
       }
     }
   }
