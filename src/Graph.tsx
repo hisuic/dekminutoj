@@ -215,8 +215,8 @@ export function dijkstra(graph: Graph, start: string, end: string): { distance: 
       }
     }
 
+    // これ以上更新できるノードがない場合
     if (current === null) {
-      // これ以上更新できるノードがない場合
       break;
     }
 
@@ -233,7 +233,7 @@ export function dijkstra(graph: Graph, start: string, end: string): { distance: 
       if (alt < dist[edge.to]) {
         dist[edge.to] = alt;
         prevNode[edge.to] = current;
-        prevEdge[edge.to] = edge.label; // どの辺を辿ったか記憶
+        prevEdge[edge.to] = edge.label; // どの辺を通ったかを記憶
       }
     }
   }
@@ -252,7 +252,7 @@ export function dijkstra(graph: Graph, start: string, end: string): { distance: 
     node = prevNode[node];
   }
 
-  // pathNodes[0]がstartじゃなく、経路が存在しない場合
+  // pathNodes[0]がstartじゃなくて経路が存在しない場合
   if (pathNodes[0] !== start) {
     return { distance: Infinity, pathNodes: [], pathEdges: [] };
   }
