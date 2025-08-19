@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Graph from './Graph.tsx'
+import { Graph } from './Graph.tsx'
 import { graphRelations, dijkstra } from "./Graph.tsx";
 import './App.css';
 
