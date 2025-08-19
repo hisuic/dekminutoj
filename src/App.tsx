@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Graph } from './Graph.tsx'
-import { graphRelations, dijkstra } from "./Graph.tsx";
+import { graphRelations, dijkstra } from "./Graph";
 import './App.css';
 
 function App() {
@@ -58,6 +57,10 @@ function App() {
   const [distance, setDistance] = useState<number | null>(null);
   const [pathNodes, setPathNodes] = useState<string[]>([]);
   const [pathEdges, setPathEdges] = useState<string[]>([]);
+
+  void distance;
+  void pathNodes;
+  void pathEdges;
 
   const handleOption1Change = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setOption1(e.target.value);
