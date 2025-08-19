@@ -10,10 +10,10 @@ function App() {
       .map(([path, module]) => [path.replace('./assets/', ''), (module as any).default])
   );
 
-  const keiroImages = Object.fromEntries(
-    Object.entries(import.meta.glob('./assets/keiro/*.png', { eager: true }))
-      .map(([path, module]) => [path.replace('./assets/keiro/*.png', ''), (module as any).default])
-  );
+  // const keiroImages = Object.fromEntries(
+  //   Object.entries(import.meta.glob('./assets/keiro/*.png', { eager: true }))
+  //     .map(([path, module]) => [path.replace('./assets/keiro/*.png', ''), (module as any).default])
+  // );
 
   const buildingSelection = [
     { value: '1', label: 'S-Port' },
@@ -51,7 +51,6 @@ function App() {
   ];
 
   const [overlayImages, setOverlayImages] = useState<string[]>([]);
-
   const [option1, setOption1] = useState<string>("");
   const [option2, setOption2] = useState<string>("");
 
